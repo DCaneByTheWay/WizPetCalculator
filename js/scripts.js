@@ -76,42 +76,51 @@ function setOutputs(event) {
     setPiercingOutputs();
 }
 
+function applyBound(num) {
+    // minimum value is 1
+    return num < 1 ? 1 : num;
+}
+
 function roundPlaces(num) {
     return Math.round(num * 10**placesRounded) / 10**placesRounded;
 }
 
+function boundAndRound(num) {
+    return roundPlaces(applyBound(num));
+}
+
 function setDamageOutputs() {
-    damageHighOutput.innerText = roundPlaces((3/400) * (2*strength + 2*will + power));
-    damageMiddleOutput.innerText = roundPlaces((2/400) * (2*strength + 2*will + power));
-    damageLowOutput.innerText = roundPlaces((1/400) * (2*strength + 2*will + power));
+    damageHighOutput.innerText = boundAndRound((3/400) * (2*strength + 2*will + power)) + "%";
+    damageMiddleOutput.innerText = boundAndRound((2/400) * (2*strength + 2*will + power)) + "%";
+    damageLowOutput.innerText = boundAndRound((1/400) * (2*strength + 2*will + power)) + "%";
 }
 
 function setResistOutputs() {
-    resistHighOutput.innerText = roundPlaces((3/250)*(2*strength + 2*agility + power));
-    resistMiddleOutput.innerText = roundPlaces((2/250)*(2*strength + 2*agility + power));
-    resistLowOutput.innerText = roundPlaces((1/250)*(2*strength + 2*agility + power));
+    resistHighOutput.innerText = boundAndRound((3/250)*(2*strength + 2*agility + power)) + "%";
+    resistMiddleOutput.innerText = boundAndRound((2/250)*(2*strength + 2*agility + power)) + "%";
+    resistLowOutput.innerText = boundAndRound((1/250)*(2*strength + 2*agility + power)) + "%";
 }
 
 function setCriticalOutputs() {
-    criticalHighOutput.innerText = roundPlaces((25/1000)*(2*agility + 2*will + power));
-    criticalMiddleOutput.innerText = roundPlaces((20/1000)*(2*agility + 2*will + power));
-    criticalLowOutput.innerText = roundPlaces((18/1000)*(2*agility + 2*will + power));
+    criticalHighOutput.innerText = boundAndRound((25/1000)*(2*agility + 2*will + power)) + "%";
+    criticalMiddleOutput.innerText = boundAndRound((20/1000)*(2*agility + 2*will + power)) + "%";
+    criticalLowOutput.innerText = boundAndRound((18/1000)*(2*agility + 2*will + power)) + "%";
 }
 
 function setAccuracyOutputs() {
-    accuracyHighOutput.innerText = roundPlaces((3/400)*(2*intellect + 2*agility + power));
-    accuracyMiddleOutput.innerText = roundPlaces((2/400)*(2*intellect + 2*agility + power));
-    accuracyLowOutput.innerText = roundPlaces((1/400)*(2*intellect + 2*agility + power));
+    accuracyHighOutput.innerText = boundAndRound((3/400)*(2*intellect + 2*agility + power)) + "%";
+    accuracyMiddleOutput.innerText = boundAndRound((2/400)*(2*intellect + 2*agility + power)) + "%";
+    accuracyLowOutput.innerText = boundAndRound((1/400)*(2*intellect + 2*agility + power)) + "%";
 }
 
 function setHealingOutputs() {
-    healingHighOutput.innerText = roundPlaces((13/2000)*(2*strength + 2*will + power));
-    healingLowOutput.innerText = roundPlaces((6/2000)*(2*strength + 2*will + power));
+    healingHighOutput.innerText = boundAndRound((13/2000)*(2*strength + 2*will + power)) + "%";
+    healingLowOutput.innerText = boundAndRound((6/2000)*(2*strength + 2*will + power)) + "%";
 }
 
 function setPiercingOutputs() {
-    piercingHighOutput.innerText = roundPlaces((5/2000)*(2*strength + 2*agility + power));
-    piercingLowOutput.innerText = roundPlaces((3/2000)*(2*strength + 2*agility + power));
+    piercingHighOutput.innerText = boundAndRound((5/2000)*(2*strength + 2*agility + power)) + "%";
+    piercingLowOutput.innerText = boundAndRound((3/2000)*(2*strength + 2*agility + power)) + "%";
 }
 
 petcalcForm.onsubmit = setOutputs;
