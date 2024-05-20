@@ -1,0 +1,38 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling the container */
+.container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling the input section */
+.input-section {
+    margin-bottom: 20px;
+}
+
+/* Styling the output section */
+.output-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styling the output groups */
+.group {
+    flex: 1 1 50%; /* Adjust as needed */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Styling the group headings */
+.group h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}

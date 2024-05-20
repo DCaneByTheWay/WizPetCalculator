@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizard101 Pet Making Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <form id="petcalc-form">
+                <input id='petcalc-input' type='text' name="data" autocomplete="off" placeholder="ex: 255 250 260 260 250"/>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="output-section">
+            <div class="group">
+                <h2>Damage</h2>
+
+                <p>School Dealer:</p>
+                <p><span id="damage-high-output">0%</span></p>
+                
+                <p>School Giver / Pain Giver:</p>
+                <p><span id="damage-middle-output">0%</span></p>
+
+                <p>School Boon / Pain Bringer:</p>
+                <p><span id="damage-low-output">0%</span></p>
+            </div>
+            <div class="group">
+                <h2>Resistance</h2>
+
+                <p>School Ward:</p>
+                <p><span id="resist-high-output">0%</span></p>
+                
+                <p>School Proof / Spell Proof:</p>
+                <p><span id="resist-middle-output">0%</span></p>
+
+                <p>School Away / Spell Defy:</p>
+                <p><span id="resist-low-output">0%</span></p>
+            </div>
+            <div class="group">
+                <h2>Critical</h2>
+
+                <p>School Assailent:</p>
+                <p><span id="critical-high-output">0%</span></p>
+                
+                <p>School Striker / Critical Striker:</p>
+                <p><span id="critical-middle-output">0%</span></p>
+
+                <p>Critical Hitter:</p>
+                <p><span id="critical-low-output">0%</span></p>
+            </div>
+            <div class="group">
+                <h2>Accuracy</h2>
+                
+                <p>School Sniper:</p>
+                <p><span id="accuracy-high-output">0%</span></p>
+                
+                <p>School Shot / Sharp Shot:</p>
+                <p><span id="accuracy-middle-output">0%</span></p>
+
+                <p>School Eye / Sharp Eye:</p>
+                <p><span id="accuracy-low-output">0%</span></p>
+            </div>
+            <div class="group">
+                <h2>Healing</h2>
+
+                <p>Healer:</p>
+                <p><span id="healing-high-output">0%</span></p>
+                
+                <p>Medic:</p>
+                <p><span id="healing-low-output">0%</span></p>
+            </div>
+            <div class="group">
+                <h2>Piercing</h2>
+
+                <p>Armor Breaker:</p>
+                <p><span id="piercing-high-output">0%</span></p>
+                
+                <p>Armor Piercer:</p>
+                <p><span id="piercing-low-output">0%</span></p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/scripts.js"></script> 
+</body>
+</html>
